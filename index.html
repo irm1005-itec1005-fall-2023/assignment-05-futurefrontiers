@@ -30,8 +30,154 @@
       YOU MAY REMOVE THE BOILERPLATE CODE BELOW
 
     -->
+    <header>
+      <h2>Weekly planner.com</h2>
+      <h5>The simple solution to organizing your simple week</h5>
+    </header>
     <main>
       <div id="app"></div>
+      <div class="Event-form">
+      <form id="Add-even">
+        <h2>Add To schedule </h2>
+        <div>
+        <label for="Weekday"> weekday</label>
+        <input id ="day">
+        </div>
+        <div>
+        <label for="">time of day</label>
+        <input id="time">
+        </div>
+        <div>
+        <label for="eventname">Name of event</label>
+        <input type="nameofevent">
+        </div>
+        <button class = "addItemBtn", type = "submit">
+          submit
+        </button>
+  
+      </form>
+      </div>
+      <ul class="list" id = "eventList">
+  
+      </ul>
+<div>
+      <table class="calander">
+        <Thead>
+          <tr>
+            <th></th>
+            <th>sunday</th>
+            <th>monday</th>
+            <th>tuesday</th>
+            <th>wednsday</th>
+            <th>thursday</th>
+            <th>friday</th>
+            <th>saturday</th>
+          </tr>
+        </Thead>
+
+        <tbody>
+          <tr>
+          <td>morning</td>
+          <td Id = "sunMor">
+            <ul class="event-list" id = "SunMorEventList">
+            </ul>
+          </td>
+          <td Id = "monMor">
+            <ul class="event-list" id = "monMorEventList">
+            </ul>
+          </td>
+          <td Id = "tuesMor">
+            <ul class="event-list" id = "tuesMorEventList">
+            </ul>
+          </td>
+          <td Id = "wedMor">
+            <ul class="event-list" id = "wedMorEventList">
+          </ul>
+          </td>
+          <td Id = "thurMor">
+            <ul class="event-list" id = "thurMorEventList">
+            </ul>
+          </td>
+          <td Id = "friMor">
+            <ul class="event-list" id = "friMorEventList">
+            </ul>
+          </td>
+          <td Id = "satMor">
+            <ul class="event-list" id = "satMorEventList">
+            </ul>
+          </td>
+          
+        </tr>
+          <tr>
+
+          <td>miday</td>
+          <td Id = "sunMid">
+            <ul class="event-list" id = "SunmidEventList">
+            </ul>
+          </td>
+          <td Id = "monMid">
+            <ul class="event-list" id = "monMidEventList">
+            </ul>
+          </td>
+          <td Id = "tuesMid">
+            <ul class="event-list" id = "tuesMidEventList">
+            </ul>
+          </td>
+          <td Id = "wedMid">
+            <ul class="event-list" id = "wedMidEventList">
+          </ul>
+          </td>
+          <td Id = "thurMid">
+            <ul class="event-list" id = "thurMidEventList">
+            </ul>
+          </td>
+          <td Id = "friMid">
+            <ul class="event-list" id = "friMidEventList">
+            </ul>
+          </td>
+          <td Id = "satMid">
+            <ul class="event-list" id = "satMidEventList">
+            </ul>
+          </td>
+          </tr>
+
+          <tr>
+          <td>night</td>
+          <td Id = "sunNi">
+            <ul class="event-list" id = "SunNiEventList">
+            </ul>
+          </td>
+          <td Id = "monNi">
+            <ul class="event-list" id = "monNiEventList">
+            </ul>
+          </td>
+          <td Id = "tuesNi">
+            <ul class="event-list" id = "tuesNiEventList">
+            </ul>
+          </td>
+          <td Id = "wedNi">
+            <ul class="event-list" id = "wedNiEventList">
+          </ul>
+          </td>
+          <td Id = "thurNi">
+            <ul class="event-list" id = "thurNiEventList">
+            </ul>
+          </td>
+          <td Id = "friNi">
+            <ul class="event-list" id = "friNiEventList">
+            </ul>
+          </td>
+          <td Id = "satNi">
+            <ul class="event-list" id = "satNiEventList">
+            </ul>
+          </td>
+          </tr>
+          
+
+        </tbody>
+      </table>
+</div>
+
     </main>
 
     <!-- This is where we add our awesome JavaScript code -->
