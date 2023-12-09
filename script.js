@@ -7,75 +7,39 @@
 // Variables
 //
 
-// Constants
-const appID = "app";
-const headingTextIcon = "🚀";
-const projectDueDate = "8 December 2023 11:59";
+//the follwoing are the variables that contain assigned values
+var tBody = document.getElementById("tBody");
+var containerModal = document.querySelector(".modalContainer");
+var selectedDayValue = "monday";
+var selectedDayName = document.getElementById("selectedDayName");
+var weekday = "monday";
+var currentWeekday = "Monday";
+var deleteYes = document.getElementById("deleteYes");
+var deleteNo = document.getElementById("deleteNo");
+var weekdayContainer = document.getElementById("weekdayContainer");
+var addBtn = document.getElementById("addBtn");
+var modalHeading = document.getElementById("modalHeading");
 
-// Variables
-let countdownDate = new Date(projectDueDate);
-
-// DOM Elements
-let appContainer = document.getElementById(appID);
-
-//
-// Functions
-//
-
-function calculateDaysLeft(countdownDate) {
-  const now = new Date().getTime();
-  const countdown = new Date(countdownDate).getTime();
-
-  console.log(countdown);
-
-  const difference = (countdown - now) / 1000;
-
-
-  // Countdown passed already
-  if (difference < 1) {
-    return null;
+var weekdaysTask = "";
+function updateTable()// this fucntion updates the task table, when a task is delted or such
+{
+  tBody.textContent = ""; //the content stored in tBoday is ""
+  for (var i = 0; i < weekdaysTask[selectedDayValue].length; i++) // for loop to store the updated data in the 
+  {
+    var tableRow = document.createElement("tr");//table row element created
+    var taskTime = document.createElement("td");//element created to store data releted to time
+    var taskTable = document.createElement("td");//element created to store data releted to tasks
+    taskTable.classList.add("taskTable");//task list
+    taskTime.textContent = weekdaysTask[selectedDayValue][i].addedTime;//the value of the time selected is in addedTime and the specific day can be found by weekdaysTask[selectedDayValue], the end value is stored in variable taskTime
+    taskTable.textContent = weekdaysTask[selectedDayValue][i].addedTask;//the task is stored in addedTime and the specific day can be found by weekdaysTask[selectedDayValue], the end value is stored in variable taskTable
+    var button1 = document.createElement("div");// new div element is created
+    var tableDeleteBtn = document.createElement("button");// new div element is created
+    tableDeleteBtn.innerText = "Delete Task";// the button created will show the text "delete task"
+    tableDeleteBtn.classList.add("deleteBtn");//a class named deleteBtn is added
+    tableDeleteBtn.addEventListener("click", buttonClicked);// when the button is clicked (the "click" event occurs, buttonClicked function is called)
+    button1.append(tableDeleteBtn);
+    taskTable.append(button1);
+    tableRow.append(taskTime, taskTable);
+    tBody.append(tableRow);
   }
-
-
-  const days = Math.floor(difference / (60 * 60 * 24));
-
-  return days;
 }
-
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
-  }
-
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  const daysLeft = calculateDaysLeft(countdownDate);
-  let headingTextCalculated = headingText;
-
-  if (daysLeft > 1) {
-    headingTextCalculated = headingTextCalculated.concat(
-      " In ",
-      daysLeft.toString(),
-      " days "
-    );
-  }else if (daysLeft === 1) {
-    headingTextCalculated = headingTextCalculated.concat(
-      " Tomorrow"
-    );
-  }
-
-  h1.textContent = headingTextCalculated.concat(headingTextIcon);
-  appContainer.appendChild(h1);
-
-  // Init complete
-  console.log("App successfully initialised");
-}
-
-//
-// Inits & Event Listeners
-//
-
-inititialise();
