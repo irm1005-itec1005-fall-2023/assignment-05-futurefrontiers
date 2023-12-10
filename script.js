@@ -6,7 +6,44 @@
 //
 // Variables
 //
+const SELECTED_DAY_CLASS = "day";
+const LOCAL_STORAGE_KEY = "thedata";
 
+// ... (existing code)
+
+function Day(event) {
+  if (!event.target.classList.contains(SELECTED_DAY_CLASS)) {
+    return;
+  } else {
+    // ... (existing code)
+  }
+}
+
+weekdayContainer.addEventListener("click", Day);
+
+function saveTasks() {
+  try {
+    const stored = JSON.stringify(weekdaysTask);
+    localStorage.setItem(LOCAL_STORAGE_KEY, stored);
+  } catch (error) {
+    console.error("Error saving tasks:", error);
+  }
+}
+
+function GETTHEDATA() {
+  try {
+    const taskStorage = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (taskStorage !== null) {
+      weekdaysTask = JSON.parse(taskStorage);
+    } else {
+      weekdaysTask = {
+        monday: [], tuesday: [], wednesday: [], thursday: [], friday: [], saturday: [], sunday: [],
+      };
+    }
+  } catch (error) {
+    console.error("Error retrieving tasks:", error);
+  }
+}
 //the follwoing are the variables that contain assigned values
 var tBody = document.getElementById("tBody");
 var containerModal = document.querySelector(".modalContainer");
