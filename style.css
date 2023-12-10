@@ -57,7 +57,7 @@ main {
   border-width: 0;
 }
 */
-
+/*
 main
 {
   display: flex;
@@ -113,4 +113,261 @@ th
 tr
 {
   background-color: bisque;
+}*/
+
+/*
+  CSS File
+*/
+
+/*
+ VARIABLES
+*/
+
+body 
+{
+  background-color: bisque;
+  box-sizing: border-box;
+  margin: 0;
+  background-size: cover;
+}
+
+h2
+{
+  color: brown;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+h5
+{
+  align-items: center;
+  color: brown;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.container 
+{
+  max-width: 1250px;
+  width: 100%;
+}
+
+.row 
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#addBtn 
+{
+  padding: 0.5rem 5rem;
+  border-radius: 2px;
+  margin: 1rem;
+  background-color: brown;
+  color: bisque;
+}
+
+#addBtn:hover 
+{
+  cursor: pointer;
+  background-color: brown;
+  border-radius: 2px;
+}
+
+.day
+{
+  border: 3px solid brown;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: brown;
+}
+
+.day:hover 
+{
+  cursor: pointer;
+  border-radius: 50%;
+  color: bisque;
+  background-color: brown;
+}
+
+.day:active 
+{
+  cursor: auto;
+  background-color: rgba(165, 42, 42, 0.788);
+}
+
+#weekdayContainer 
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+table
+{
+  border: solid brown;
+  width: 800px;
+  color: brown;
+}
+
+td
+{
+  border: solid brown;
+  padding: 2px;
+}
+
+th
+{
+  border: solid brown;
+  text-align: left;
+  background-color: bisque;
+  padding: 2px;
+}
+
+tr
+{
+  background-color: bisque;
+}
+
+.taskTable 
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalContainer 
+{
+  background-color: bisque;
+  color: brown;
+  border-color: brown;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(67, 61, 61, 0.678);
+}
+
+#modalHeading
+{
+  color: brown;
+}
+
+.modal 
+{
+  width: 600px;
+  height: 280px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  text-align: center;
+}
+
+.modalOptions
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.modalContainer select 
+{
+  color: brown;
+  background-color: bisque;
+  margin-bottom: 1rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2px;
+  font-weight: 700;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.modalContainer button 
+{
+  padding: 0.2rem 1rem;
+  border: 1px solid brown;
+  border-radius: 2px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background-color: bisque;
+  color: brown;
+}
+
+.deleteBtn 
+{
+  width: 115px;
+  margin-right: 10px;
+  color: brown;
+  background-color: bisque;
+  border: 2px solid brown;
+  border-radius: 2px;
+  background-color: bisque;
+}
+
+.deleteBtn:hover
+{
+  background-color: rgba(197, 126, 126, 0.915);
+  cursor: pointer;
+}
+
+#deleteModal > div 
+{
+  flex-direction: column;
+  color: brown;
+}
+
+.buttons
+{
+  align-content: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#deleteModal > .modal 
+{
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 228, 196, 0.849);
+}
+
+#submitButton
+{
+  background-color: bisque;
+  cursor: pointer;
+}
+
+.deleteButton 
+{
+  width: 10%;
+}
+
+.deleteButton:hover 
+{
+  background-color: #f5545485;
+  cursor: pointer;
+}
+
+.deleteButton:active 
+{
+  cursor: auto;
+}
+
+.hidden 
+{
+  display: none;
 }
